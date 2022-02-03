@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"os"
 
@@ -12,8 +13,8 @@ import (
 
 var (
 	// Database connection
-	databaseDsn string
-	db          *gorm.DB
+	dsn string
+	db  *gorm.DB
 
 	// Loggers
 	WarningLogger   *log.Logger
@@ -36,7 +37,7 @@ func init() {
 	ErrorLogger = log.New(os.Stdout, "ERROR: ", log.Ldate|log.Ltime)
 }
 
-func database(dsn string) {
+func database() {
 	var err error
 
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
@@ -59,20 +60,26 @@ func configuration(path string) {
 			}
 		}
 	}
+
+	dsn = fmt.Sprintf("%s:%s@tcp(%s)/%s",
+		config.DatabaseUsername,
+		config.DatabasePassword,
+		config.DatabaseHostname,
+		config.DatabaseName,
+	)
 }
 
 func main() {
-	flag.StringVar(&databaseDsn, "dsn", "root:ascent@tcp(localhost:3306)/emucoach_v15_vip_world", "The database DSN string")
-	flag.StringVar(&configPath, "config", "./manipulations.toml", "The configuration file to use")
+	flag.StringVar(&configPath, "config", "manipulations.toml", "The configuration file to use")
 	flag.BoolVar(&debugging, "debugging", false, "The configuration file to use")
 	flag.Parse()
 
-	// Instantiate Database connection
-	database(databaseDsn)
-	InfoLogger.Printf("connected to database: %s\n", databaseDsn)
-
 	configuration(configPath)
 	InfoLogger.Printf("successfully loaded configuration: %s\n", configPath)
+
+	// Instantiate Database connection
+	database()
+	InfoLogger.Printf("connected to database: %s\n", dsn)
 
 	switch config.Repack {
 	case "catav15":

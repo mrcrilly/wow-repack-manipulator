@@ -1,3 +1,8 @@
+database_hostname = "localhost:3306"
+database_username = "root"
+database_password = "ascent"
+database_name = "emucoach_v15_vip_world"
+
 repack = "catav15"
 
 [[manipulation]]

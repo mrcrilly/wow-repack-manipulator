@@ -22,6 +22,11 @@ You need to create a TOML file. Any name will do but the tool looks for `./manip
 Here's an example:
 
 ```toml
+database_hostname = "localhost:3306"
+database_username = "root"
+database_password = "ascent"
+database_name = "emucoach_v15_vip_world"
+
 repack = "catav15"
 
 [[manipulation]]
@@ -34,6 +39,8 @@ modifiers = [
     {key="difficulty_entry_2", value=3}
 ]
 ```
+
+The `database_*` related flags are somewhat obvious: change them to reflect the connection information to your database.
 
 Let's review each key/value pair (`repack`, etc.) and the array of tables (`[[manipulation]]`).
 
