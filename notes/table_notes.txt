@@ -1,0 +1,37 @@
+---creature---
+guid: Unique ID for each creature placed in the world. Generated automatically from placing a creature.
+id: Id of the creature, pulled from creature_template. This is the ID seen on WoWHead and in .lookup creature commands.
+map: ID of the map the creature is placed on, this is how you would reference if a creature is placed in a specific instance, for example
+
+
+---creature_template--- [This is where most data for creatures is found.]
+entry: The creature's ID. This is the ID seen on WoWHead and in .lookup creature commands.
+
+difficulty_entry_1 - difficulty_entry_3: Creature IDs that the creature will pull stats from on higher difficulties. 1 is heroic dungeon and 25 player raid, 2 is 10 player heroic raid, and 3 is 25 player heroic raid. Normal dungeons and 10 player normal raids will always pull stats from the base creature entry.
+
+modelid1-modelid4: Handles creature's appearance, references an entry from creature_display_info.dbc. Filling out more than one field randomizes a creature's appearance amongst up to 4 models.
+
+name: Creature's name, as displayed in-game.
+
+gossip_menu_id: Id from gossip_menu, this is part of the dialogue window system on creatures, like when you ask a guard for directions.
+
+minlevel/maxlevel: Sets level on a creature as a range randomized from minlevel to maxlevel. Make these the same if you want a creature to have a static level, like most bosses do.
+
+exp: Expansion of a creature, handles hit point table they pull from. 0 for Vanilla, 1 for BC, 2 for WotLK, 3 for Cata. Has nothing to do with experience points, including the expansion based kill experience tables which seems to be area based and hardcoded.
+
+faction_a/faction_h: Faction of a creature, used to attach them to a specific faction or simply make them hostile, neutral, or friendly.
+
+mindmg/maxdmg/minrangedmg/maxrangedmg/attackpower/rangedattackpower/dmg_multiplier: The melee and ranged damage settings. Ranged is only used for specific attacks. dmg_multiplier is usually what I use for rescaling base damage if needed, however it does not effect spells, aside from spells that pull from weapon damage.
+
+lootid: Creature's loot, pulled from creature_loot_template. Typically is the same as creature's id, or 0 if they have no loot, but works fine if set to something different.
+
+mingold/maxgold: Handles gold dropped by creature in a range from min to max.
+
+Health_mod: A multiplier of the creature's health. Base health is determined by level and exp.
+
+Mana_mod: A multiplier of the creature's mana. Base mana is determined by level and exp.
+
+
+---creature_template_addon--- [Note that not every creature has an entry here. If it doesn't, it will need to be created.]
+entry: Id of the creature, pulled from creature_template. This is the ID seen on WoWHead and in .lookup creature commands.
+auras: Spell effects that the creature will spawn with. This is text separated by spaces, for example "64573 52855" here means the creature will spawn with spells 64573 and 52855 active on it. If a creature does not spawn with spells on it already, this may be empty or NULL, or the creature may have no creature_template_addon entry at all if it uses no other data from this table.
