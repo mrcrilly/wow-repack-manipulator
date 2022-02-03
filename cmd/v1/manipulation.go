@@ -2,12 +2,13 @@ package main
 
 import "gorm.io/gorm"
 
-type Manipulator func(*gorm.DB, int, string, interface{}) error
+type Manipulator func(*gorm.DB, string, []int, string, interface{}) error
 
 type Manipulation struct {
-	Type       string                  `toml:"type"`
-	CreatureID int                     `toml:"entry"`
-	Pairs      []ManipulationFieldPair `toml:"modifiers"`
+	Type      string                  `toml:"type"`
+	UniqueIDs []int                   `toml:"id"`
+	Column    string                  `toml:"column"`
+	Pairs     []ManipulationFieldPair `toml:"modifiers"`
 }
 
 type ManipulationFieldPair struct {

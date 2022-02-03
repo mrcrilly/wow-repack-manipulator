@@ -16,19 +16,24 @@ var (
 	db          *gorm.DB
 
 	// Loggers
-	WarningLogger *log.Logger
-	InfoLogger    *log.Logger
-	ErrorLogger   *log.Logger
+	WarningLogger   *log.Logger
+	InfoLogger      *log.Logger
+	DebuggingLogger *log.Logger
+	ErrorLogger     *log.Logger
 
 	// Configuration
 	config     Config
 	configPath string
+
+	// Debugging
+	debugging bool
 )
 
 func init() {
-	InfoLogger = log.New(os.Stdout, "INFO: ", log.Ldate|log.Ltime|log.Lshortfile)
-	WarningLogger = log.New(os.Stdout, "WARNING: ", log.Ldate|log.Ltime|log.Lshortfile)
-	ErrorLogger = log.New(os.Stdout, "ERROR: ", log.Ldate|log.Ltime|log.Lshortfile)
+	InfoLogger = log.New(os.Stdout, "INFO: ", log.Ldate|log.Ltime)
+	WarningLogger = log.New(os.Stdout, "WARNING: ", log.Ldate|log.Ltime)
+	DebuggingLogger = log.New(os.Stdout, "DEBUGGING: ", log.Ldate|log.Ltime)
+	ErrorLogger = log.New(os.Stdout, "ERROR: ", log.Ldate|log.Ltime)
 }
 
 func database(dsn string) {
@@ -45,11 +50,22 @@ func configuration(path string) {
 	if err != nil {
 		ErrorLogger.Fatalf("unable to load %s: %s\n", path, err)
 	}
+
+	if debugging {
+		for _, m := range config.Manips {
+			DebuggingLogger.Printf("type: %s; column: %s; type: %s; ids: %v; modifiers: %d\n", m.Type, m.Column, m.Type, m.UniqueIDs, len(m.Pairs))
+			for _, p := range m.Pairs {
+				DebuggingLogger.Printf("\tkey: %s; value: %v\n", p.Key, p.Value)
+			}
+		}
+	}
 }
 
 func main() {
 	flag.StringVar(&databaseDsn, "dsn", "root:ascent@tcp(localhost:3306)/emucoach_v15_vip_world", "The database DSN string")
 	flag.StringVar(&configPath, "config", "./manipulations.toml", "The configuration file to use")
+	flag.BoolVar(&debugging, "debugging", false, "The configuration file to use")
+	flag.Parse()
 
 	// Instantiate Database connection
 	database(databaseDsn)
@@ -61,5 +77,7 @@ func main() {
 	switch config.Repack {
 	case "catav15":
 		parseCataV15Repack(config.Manips)
+	default:
+		ErrorLogger.Fatalln("unknown repack value provided")
 	}
 }

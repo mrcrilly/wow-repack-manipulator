@@ -16,12 +16,12 @@ func parseCataV15Repack(manips []Manipulation) {
 		}
 
 		for _, p := range m.Pairs {
-			err := manipulator(db, m.CreatureID, p.Key, p.Value)
+			err := manipulator(db, m.Column, m.UniqueIDs, p.Key, p.Value)
 
 			if err != nil {
 				ErrorLogger.Fatal(err)
 			} else {
-				InfoLogger.Printf("updated created %d: '%s' = '%v'", m.CreatureID, p.Key, p.Value)
+				InfoLogger.Printf("%s: updated id '%v': '%s' = '%v'", m.Type, m.UniqueIDs, p.Key, p.Value)
 			}
 
 		}

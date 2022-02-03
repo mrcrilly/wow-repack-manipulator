@@ -1,23 +1,23 @@
 package catav15
 
 import (
-	"errors"
 	"fmt"
 	"reflect"
 
 	"gorm.io/gorm"
 )
 
-func ManipulateCreature(db *gorm.DB, entry int, key string, value interface{}) error {
-	return errors.New("not implemented")
+func ManipulateCreature(db *gorm.DB, column string, id []int, key string, value interface{}) error {
+	model := Creature{}
+	return manipulate(db, column, id, key, value, model)
 }
 
-func ManipulateCreatureTemplate(db *gorm.DB, entry int, key string, value interface{}) error {
+func ManipulateCreatureTemplate(db *gorm.DB, column string, id []int, key string, value interface{}) error {
 	model := CreatureTemplate{}
-	return manipulate(db, entry, key, value, model)
+	return manipulate(db, column, id, key, value, model)
 }
 
-func manipulate(db *gorm.DB, entry int, key string, value interface{}, model interface{}) error {
+func manipulate(db *gorm.DB, column string, id []int, key string, value interface{}, model interface{}) error {
 	realType := getFieldType(columnKeyToStructKey(key), model)
 	if realType == nil {
 		return fmt.Errorf("bad key/column for creature_template: %s", key)
@@ -38,8 +38,10 @@ func manipulate(db *gorm.DB, entry int, key string, value interface{}, model int
 			break
 		}
 
-		// ... other update the table based on the entry id
-		db.Model(&model).Where("entry = ?", entry).UpdateColumn(key, realValue)
+		// ... update the table based on the id id
+		for _, i := range id {
+			db.Model(&model).Where(fmt.Sprintf("%s = ?", column), i).UpdateColumn(key, realValue)
+		}
 
 	case reflect.Int:
 		realValue, OK := value.(int64)
@@ -48,7 +50,9 @@ func manipulate(db *gorm.DB, entry int, key string, value interface{}, model int
 			break
 		}
 
-		db.Model(&model).Where("entry = ?", entry).UpdateColumn(key, realValue)
+		for _, i := range id {
+			db.Model(&model).Where(fmt.Sprintf("%s = ?", column), i).UpdateColumn(key, realValue)
+		}
 
 	case reflect.Float64:
 		realValue, OK := value.(float64)
@@ -57,7 +61,9 @@ func manipulate(db *gorm.DB, entry int, key string, value interface{}, model int
 			break
 		}
 
-		db.Model(&model).Where("entry = ?", entry).UpdateColumn(key, realValue)
+		for _, i := range id {
+			db.Model(&model).Where(fmt.Sprintf("%s = ?", column), i).UpdateColumn(key, realValue)
+		}
 
 	// Error handling case, basically...
 	default:
@@ -65,7 +71,7 @@ func manipulate(db *gorm.DB, entry int, key string, value interface{}, model int
 	}
 
 	if typeCastProblem {
-		return fmt.Errorf("entry %d: unable to convert %v to required type %s - stopping", entry, value, realType.Name())
+		return fmt.Errorf("id %d: unable to convert %v to required type %s - stopping", id, value, realType.Name())
 	}
 
 	return nil

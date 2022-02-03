@@ -1,0 +1,545 @@
+repack = "catav15"
+
+# -- Halls of Origination
+# -- Heroic
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [48891,49297,48717,48890,48893,49305,49306]
+modifiers = [ { key = "rank", value = 99 } ]
+
+# -- Normal
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [39444,40458,40550,40585,40630,40716,41212,41257,41374,42556,51329]
+modifiers = [ { key = "rank", value = 1 } ]
+
+# -- Throne of the Tides
+
+# -- Heroic
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [49103,49068]
+modifiers = [ { key = "rank", value = 1 } ]
+
+# -- Normal
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [40923,44658]
+modifiers = [ { key = "rank", value = 1 } ]
+
+# -- Blackrock Caverns
+
+# -- Heroic
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [50417,40085,50376]
+modifiers = [ { key = "rank", value = 1 } ]
+
+# -- Normal
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [40084]
+modifiers = [ { key = "rank", value = 1 } ]
+
+# -- Vortex Pinnacle
+
+# -- Heroic
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [45933,52020]
+modifiers = [ { key = "rank", value = 1 } ]
+
+# -- Normal
+
+[[manipulation]]
+type = "creature_template"
+column = "entry"
+id = [45932,52019,46007]
+modifiers = [ { key = "rank", value = 1 } ]
+
+# -- The Stonecore
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49656;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49655;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49666;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49669;
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 43917;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 42845;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 42695;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 43662;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 42428;
+
+# -- The Lost City of Tol'Vir
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49315;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48954;
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 45063;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 45001;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 43658;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 44261;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 43934;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 45096;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 44260;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 44234;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 45007;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 45065;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 47720;
+
+# -- Grim Batol
+
+# -- Heroic (No difference from normal)
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 39450;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48756;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 42570;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 39984;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 45467;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 40365;
+# UPDATE `creature_template` SET `rank` = 0 WHERE `entry` = 40486;
+
+# -- Deadmines
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49241;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48810;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48824;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48826;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48827;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48781;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48782;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48834;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49493;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49493;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48957;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48958;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48811;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49520;
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 47714;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48420;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48440;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48441;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48442;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48447;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48450;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48229;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48419;
+
+# -- Shadowfang Keep
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48842;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 49125;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 50562;
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 47131;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 47132;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 50561;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 48124;
+
+# -- End Time
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54952;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54435;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54688;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54699;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54700;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54517;
+
+# -- Zul'Aman
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24047;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24159;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24064;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 53021;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23889;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23586;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23889;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24396;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52638;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24338;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23818;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24504;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52827;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24858;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24858;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23757;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23822;
+
+# -- Zul'Aman
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52373;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52375;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52376;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52377;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52434;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52435;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52089;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52436;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52437;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52323;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52441;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52306;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 53088;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 53108;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52305;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52624;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52379;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52402;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52284;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 52755;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54224;
+
+# -- Well of Eternity
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54695;
+
+# -- Hour of Twilight
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54646;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 55466;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 54995;
+
+# -- Ahn'kahet: The Old Kingdom
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 30106;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 31458;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 31686;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 31687;
+
+# -- Sethekk Halls
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18701;
+
+# -- The Steamvault
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21338;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17954;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21696;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17951;
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21915;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20631;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21916;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20632;
+
+# -- Shadow Labyrinth
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18641;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18642;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18797;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19226;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18663;
+
+# -- The Shattered Halls
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17357;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17083;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17621;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17623;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17622;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17462;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17669;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17693;
+
+# -- The Black Morass
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17835;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21137;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17892;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21136;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18994;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21138;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18995;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21139;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21818;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18983;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17952;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18982;
+
+# -- The Botanica
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19953;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19608;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25354;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19949;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19920;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19919;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20078;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19953;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19958;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19962;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18587;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19969;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19964;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19557;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19598;
+
+# -- The Mechanar
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21062;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20478;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19716;
+
+
+# -- The Arcatraz
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21346;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20865;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21395;
+
+# -- Utgarde Keep
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28419;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29735;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24084;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23970;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 23965;
+
+# -- The Nexus
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 26746;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 26793;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 32665;
+
+# -- Azjol-Nerub
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28619;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29062;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29096;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29097;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29213;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29098;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29340;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29118;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29117;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29214;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29063;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29064;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29119;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29209;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 32593;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29051;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28925;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28736;
+
+# -- Ahn'Kahet: the Old Kingdom
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 30114;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 30435;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 30338;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 30287;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 30391;
+
+# -- Drak'Tharon Keep
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 26622;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 26824;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 26674;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27600;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27598;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 32786;
+
+# -- The Violet Hold
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 30665;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29364;
+
+# -- Gundrak
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29834;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29874;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29982;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29713;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29637;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29680;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 29742;
+
+# -- Halls of Stone
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27973;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28384;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27979;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28165;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27981;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27974;
+
+# -- Karazhan
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17283;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17248;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 16409;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17067;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17261;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 16468;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17267;
+
+# -- Halls of Lightning
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28585;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28695;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 28825;
+
+# -- Utgarde Pinnacle
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27228;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27281;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 26536;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 27386;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 26667;
+
+# -- Hellfire Ramparts
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17540;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17280;
+
+# -- Blood Furnace
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17401;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19016;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17477;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17399;
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18605;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21646;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18606;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18614;
+
+# -- Slave Pens
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17963;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17964;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25756;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25757;
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19902;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19904;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25756;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25757;
+
+
+# -- Underbog
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 22299;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 17990;
+
+# -- Mana Tombs
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19306;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18429;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18430;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18431;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18394;
+
+# -- Auchenai Crypts
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18441;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18700;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18500;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18498;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18499;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18501;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18503;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18557;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18556;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18558;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18559;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18506;
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20305;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20317;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20320;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20321;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20322;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20323;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20309;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20310;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20311;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20312;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20313;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 20316;
+
+# -- Sethekk Halls
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19205;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19203;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19204;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 19206;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21891;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 18701;
+
+# -- Magister's Terrace
+
+# -- Heroic
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25545;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 500102;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25564;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25566;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25552;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 500101;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 25557;
+
+# -- Normal
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24761;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24745;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24552;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24815;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24722;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24675;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 24781;
+
+# -- Serpentshrine Cavern
+
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 21958;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 22250;
+# UPDATE `creature_template` SET `rank` = 1 WHERE `entry` = 22009;

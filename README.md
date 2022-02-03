@@ -26,19 +26,13 @@ repack = "catav15"
 
 [[manipulation]]
 type = "creature_template"
-entry = 40
-
-[[manipulation.modifiers]]
-key = "name"
-value = "Kobold MINER" # default: "Kobold Miner"
-
-[[manipulation.modifiers]]
-key = "difficulty_entry_1"
-value = 2 # default: 0
-
-[[manipulation.modifiers]]
-key = "difficulty_entry_2"
-value = 3 # default: 0
+column = "entry"
+id = [40]
+modifiers = [
+    {key="name", value="Kobold MINER"},
+    {key="difficulty_entry_1", value=2},
+    {key="difficulty_entry_2", value=3}
+]
 ```
 
 Let's review each key/value pair (`repack`, etc.) and the array of tables (`[[manipulation]]`).
@@ -57,7 +51,10 @@ This key is an array of tables. In JSON notion this would look like this:
 [
     {
         "type": "creature_table",
-        "entry": 40,
+        "column": "entry",
+        "id": [
+            40,
+        ],
         "modifiers": [
             {
                 "key": "name",
@@ -76,13 +73,13 @@ This key is an array of tables. In JSON notion this would look like this:
 ]
 ```
 
-This will manipulate the `creature_table` MySQL table and edit the following columns as such:
+This will manipulate (`modifiers`) the `creature_table` MySQL table (`type`) and edit the following columns (`modifiers.key`) by finding each one based on the unique (`id`):
 
 * `name` would be changed from `Kobold Miner` to `Kobold MINER`
 * `difficulty_entry_1` would be changed from `0` to `2`
 * `difficulty_entry_2` would be changed from `0` to `3`
 
-You can have as many `[[manipulation]]` entries as you like, and under each `[[manipulation]]` you can have as many `[[manipulation.modifiers]]` as you like.
+The `id` value is a list of IDs for the `entry` column. It has to be a list and it has to have at least one value otherwise nothing is updated.
 
 #### Note
 
@@ -100,6 +97,7 @@ You can override two settings: the default database connection string (`dsn`) an
 
 * `-dsn "root:ascent@tcp(localhost:3306)/emucoach_v15_vip_world"`
 * `-config "./manipulations.toml"`
+* `-debugging`
 
 This is what it looks like to run the code:
 

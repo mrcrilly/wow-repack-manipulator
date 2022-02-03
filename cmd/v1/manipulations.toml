@@ -2,16 +2,10 @@ repack = "catav15"
 
 [[manipulation]]
 type = "creature_template"
-entry = 40
-
-[[manipulation.modifiers]]
-key = "name"
-value = "Kobold MINER"
-
-[[manipulation.modifiers]]
-key = "difficulty_entry_1"
-value = 2
-
-[[manipulation.modifiers]]
-key = "difficulty_entry_2"
-value = 3
+column = "entry"
+id = [40]
+modifiers = [
+    {key="name", value="Kobold MINER"},
+    {key="difficulty_entry_1", value=2},
+    {key="difficulty_entry_2", value=3}
+]
