@@ -100,9 +100,8 @@ This means this tool is a potential foot cannon. Good luck ;-)
 
 (Currently in development so you're just seeing the results of running the code via the Go compiler and not a compiled, released binary.)
 
-You can override two settings: the default database connection string (`dsn`) and the configuration file path:
+There are two flags to the command that you can provide:
 
-* `-dsn "root:ascent@tcp(localhost:3306)/emucoach_v15_vip_world"`
 * `-config "./manipulations.toml"`
 * `-debugging`
 
