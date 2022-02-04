@@ -1,5 +1,11 @@
 package catav15
 
+import (
+	"fmt"
+
+	"gorm.io/gorm"
+)
+
 type CreatureTemplate struct {
 	Entry              int     `gorm:"column:entry"`
 	DifficultyEntry1   int     `gorm:"column:difficulty_entry_1"`
@@ -98,4 +104,34 @@ type CreatureTemplate struct {
 
 func (CreatureTemplate) TableName() string {
 	return "creature_template"
+}
+
+type GenericCreatureTemplateManipulator struct {
+	Column string
+	ID     []int
+	Key    string
+	Value  interface{}
+}
+
+func (m *GenericCreatureTemplateManipulator) SetFlag(name string, value interface{}) error {
+	switch name {
+	case "column":
+		m.Column = value.(string)
+	case "id":
+		m.ID = value.([]int)
+	case "key":
+		m.Key = value.(string)
+	case "value":
+		m.Value = value
+	default:
+		return fmt.Errorf("unknown flag given: %s", name)
+	}
+
+	return nil
+}
+
+func (m GenericCreatureTemplateManipulator) Execute(db *gorm.DB) error {
+	model := CreatureTemplate{}
+	db.Model(&model).Where(fmt.Sprintf("%s = ?", m.Column), m.ID).UpdateColumn(m.Key, m.Value)
+	return nil
 }

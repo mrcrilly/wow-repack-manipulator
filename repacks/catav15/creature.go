@@ -1,5 +1,11 @@
 package catav15
 
+import (
+	"fmt"
+
+	"gorm.io/gorm"
+)
+
 type Creature struct {
 	Guid            int
 	Id              int
@@ -29,4 +35,34 @@ type Creature struct {
 
 func (Creature) TableName() string {
 	return "creature"
+}
+
+type GenericCreatureManipulator struct {
+	Column string
+	ID     []int
+	Key    string
+	Value  interface{}
+}
+
+func (m *GenericCreatureManipulator) SetFlag(name string, value interface{}) error {
+	switch name {
+	case "column":
+		m.Column = value.(string)
+	case "id":
+		m.ID = value.([]int)
+	case "key":
+		m.Key = value.(string)
+	case "value":
+		m.Value = value
+	default:
+		return fmt.Errorf("unknown flag given: %s", name)
+	}
+
+	return nil
+}
+
+func (m *GenericCreatureManipulator) Execute(db *gorm.DB) error {
+	model := Creature{}
+	db.Model(&model).Where(fmt.Sprintf("%s = ?", m.Column), m.ID).UpdateColumn(m.Key, m.Value)
+	return nil
 }

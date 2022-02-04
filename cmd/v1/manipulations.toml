@@ -10,7 +10,15 @@ type = "creature_template"
 column = "entry"
 id = [40]
 modifiers = [
-    {key="name", value="Kobold MINER"},
-    {key="difficulty_entry_1", value=2},
-    {key="difficulty_entry_2", value=3}
+    {key="name", value="Kobold DICKHEAD"},
+    {key="difficulty_entry_1", value=1},
+    {key="difficulty_entry_2", value=1}
+]
+
+[[manipulation]]
+type = "scale_creature_in_zone_area"
+zone_id = 11
+area_id = 11
+modifiers = [
+    {key="Health_mod", value=0.5},
 ]
