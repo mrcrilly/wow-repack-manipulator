@@ -66,7 +66,14 @@ func (m *RemoveNPCByGUIDManipulator) SetFlag(name string, value interface{}) err
 
 func (m RemoveNPCByGUIDManipulator) Execute(db *gorm.DB) error {
 	var creatures []Creature
-	db.Where("guid = ?", m.GUID).Find(&creatures)
+
+	// Cannot use built in []int feature of GORM as it causes problems
+	// with MySQL
+	for _, guid := range m.GUID {
+		var c Creature
+		db.Where("guid = ?", guid).Find(&c)
+		creatures = append(creatures, c)
+	}
 
 	if len(creatures) == 0 {
 		return fmt.Errorf("no creatures found for given guid(s): %v", m.GUID)

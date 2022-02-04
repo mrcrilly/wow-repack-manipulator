@@ -5,3 +5,4 @@ go build -o builds/wow-repack-manipulator.exe
 
 $env:GOOS = "linux"
 go build -o builds/wow-repack-manipulator
+cd ..\..

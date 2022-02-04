@@ -1,5 +1,10 @@
 repack = "catav15"
 
+database_hostname = "localhost:3306"
+database_username = "root"
+database_password = "ascent"
+database_name = "emucoach_v15_vip_gold_world"
+
 # Gem and material vendors
 [[manipulation]]
 type = "delete_npc_by_guid"
