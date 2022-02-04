@@ -1,0 +1,66 @@
+repack = "catav15"
+
+database_hostname = "localhost:3306"
+database_username = "root"
+database_password = "ascent"
+database_name = "emucoach_v15_vip_gold_world"
+
+# All Stormwind gem and material vendors
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9981846, 9981847, 9981848, 9981849, 9981850, 9981851, 9981852, 9981853, 9981854, 9981855, 9981856, 9981857, 9981858, 9981859, 9981860, 9981861, 9981868,  9981869, 9981870, 9981871, 9981872, 9981873,  9981874, 9981875, 9981876, 9981877]
+
+# All Stormwind gear set vendors
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9981829,9981830,9981831,9981832,9981833,9981834,9981835,9981836,9981837,9981838,9981839,9981840,9981841,9981843,9981844,9981862,9981863,9981864,9981865,9981866,9981867,9981868,9981869,9981870,9981871,9981872,9981873,9981874,9981875,9981876,9981877,9981878,9981879,9981880,9981881,9981882,9981883,9981884,9981885,9981886,998187]
+
+# Orgrimmar Teleporter
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9984497]
+
+# Stormwind Teleporter
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9984497]
+
+# Enchant NPC
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9981891]
+
+# 1v1 Arena
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9981888]
+
+# Arena Spectator
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9981889]
+
+# Skirmish
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9981890]
+
+# Profession NPC
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9984496]
+
+# XP Rate
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9986194]
+
+# Char Customizer
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9986196]
+
+# Transmog
+[[manipulation]]
+type = "delete_npc_by_guid"
+id = [9985348]

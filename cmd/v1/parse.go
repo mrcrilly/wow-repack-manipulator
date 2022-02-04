@@ -52,7 +52,18 @@ func parseCataV15Repack(manips []Manipulation) {
 			if err != nil {
 				ErrorLogger.Fatal(err)
 			} else {
-				InfoLogger.Printf("%s: deleted NPC(s) with guid(s) %v", m.Type, m.UniqueIDs)
+				InfoLogger.Printf("%s: removed NPC(s) with guid(s) %v from the world", m.Type, m.UniqueIDs)
+			}
+
+		case "delete_npc_from_game":
+			manipulator := &catav15.RemoveNPCFromGameManipulator{}
+			manipulator.SetFlag("guid", m.UniqueIDs)
+			err := manipulator.Execute(db)
+
+			if err != nil {
+				ErrorLogger.Fatal(err)
+			} else {
+				InfoLogger.Printf("%s: deleted NPC(s) with guid(s) %v from the game", m.Type, m.UniqueIDs)
 			}
 		}
 

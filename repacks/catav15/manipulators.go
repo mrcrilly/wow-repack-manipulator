@@ -87,3 +87,44 @@ func (m RemoveNPCByGUIDManipulator) Execute(db *gorm.DB) error {
 
 	return nil
 }
+
+type RemoveNPCFromGameManipulator struct {
+	GUID []int
+}
+
+func (m *RemoveNPCFromGameManipulator) SetFlag(name string, value interface{}) error {
+	switch name {
+	case "guid":
+		m.GUID = value.([]int)
+	default:
+		return fmt.Errorf("unknown flag given: %s", name)
+	}
+
+	return nil
+}
+
+func (m RemoveNPCFromGameManipulator) Execute(db *gorm.DB) error {
+	var creatures []Creature
+
+	// Cannot use built in []int feature of GORM as it causes problems
+	// with MySQL
+	for _, guid := range m.GUID {
+		var c Creature
+		db.Where("guid = ?", guid).Find(&c)
+		creatures = append(creatures, c)
+	}
+
+	if len(creatures) == 0 {
+		return fmt.Errorf("no creatures found for given guid(s): %v", m.GUID)
+	}
+
+	// Cannot just pass a []int to GORM here as the list can be too large
+	// resulting in operahand error
+	for _, c := range creatures {
+		var ct CreatureTemplate
+		db.Model(&CreatureTemplate{}).Where("entry = ?", c.Id).First(&ct)
+		db.Where("entry = ?", ct.Entry).Delete(&ct)
+	}
+
+	return nil
+}
