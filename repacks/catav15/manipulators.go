@@ -82,7 +82,7 @@ func (m RemoveNPCByGUIDManipulator) Execute(db *gorm.DB) error {
 	// Cannot just pass a []int to GORM here as the list can be too large
 	// resulting in operahand error
 	for _, c := range creatures {
-		db.Delete(&c)
+		db.Where("guid = ?", c.Guid).Delete(&c)
 	}
 
 	return nil
