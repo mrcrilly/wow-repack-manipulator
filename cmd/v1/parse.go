@@ -45,7 +45,7 @@ func parseCataV15Repack(manips []Manipulation) {
 			}
 
 		case "delete_npc_by_guid":
-			manipulator := &catav15.CreatureByZoneAndAreaManipulator{}
+			manipulator := &catav15.RemoveNPCByGUIDManipulator{}
 			manipulator.SetFlag("guid", m.UniqueIDs)
 			err := manipulator.Execute(db)
 
