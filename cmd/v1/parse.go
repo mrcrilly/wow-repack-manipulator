@@ -43,6 +43,17 @@ func parseCataV15Repack(manips []Manipulation) {
 					InfoLogger.Printf("%s: updated zone id '%d' and area id '%d': '%s' = '%v'", m.Type, m.ZoneID, m.AreaID, p.Key, p.Value)
 				}
 			}
+
+		case "delete_npc_by_guid":
+			manipulator := &catav15.CreatureByZoneAndAreaManipulator{}
+			manipulator.SetFlag("guid", m.UniqueIDs)
+			err := manipulator.Execute(db)
+
+			if err != nil {
+				ErrorLogger.Fatal(err)
+			} else {
+				InfoLogger.Printf("%s: deleted NPC(s) with guid(s) %v", m.Type, m.UniqueIDs)
+			}
 		}
 
 	}

@@ -48,3 +48,35 @@ func (m CreatureByZoneAndAreaManipulator) Execute(db *gorm.DB) error {
 
 	return nil
 }
+
+type RemoveNPCByGUIDManipulator struct {
+	GUID []int
+}
+
+func (m *RemoveNPCByGUIDManipulator) SetFlag(name string, value interface{}) error {
+	switch name {
+	case "guid":
+		m.GUID = value.([]int)
+	default:
+		return fmt.Errorf("unknown flag given: %s", name)
+	}
+
+	return nil
+}
+
+func (m RemoveNPCByGUIDManipulator) Execute(db *gorm.DB) error {
+	var creatures []Creature
+	db.Where("guid = ?", m.GUID).Find(&creatures)
+
+	if len(creatures) == 0 {
+		return fmt.Errorf("no creatures found for given guid(s): %v", m.GUID)
+	}
+
+	// Cannot just pass a []int to GORM here as the list can be too large
+	// resulting in operahand error
+	for _, c := range creatures {
+		db.Delete(&c)
+	}
+
+	return nil
+}
