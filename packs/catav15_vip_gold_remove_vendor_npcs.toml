@@ -134,3 +134,8 @@ id = [9986196]
 [[manipulation]]
 type = "delete_npc_from_game"
 id = [9985348]
+
+# Gambler
+[[manipulation]]
+type = "delete_npc_from_game"
+id = [9986195]
